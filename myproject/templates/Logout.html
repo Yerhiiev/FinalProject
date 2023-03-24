@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGOUT</title>
+</head>
+<body>
+<form action="/user/logout" method="post">
+    {% csrf_token %}
+      <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/tasks/completed_task';" value="Complete Task"/>
+      <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/tasks/add_task';" value="Add Task"/>
+      <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/tasks/rating';" value="Rating"/>
+      <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/user/logout';" value="Logout"/>
+</form>
+</body>
+</html>

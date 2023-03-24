@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+      <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/tasks/completed_task';" value="Complete Task"/>
+      <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/tasks/rating';" value="Rating"/>
+      <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/user/logout';" value="Logout"/>
+</form>
+<h1>Add task: </h1>
+<form action="/tasks/add_task" method="post">
+    {% csrf_token %}
+    <input type="text" name="task" placeholder="task">
+    <input type="text" name="rating" placeholder="rating">
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>

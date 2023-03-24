@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+      <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/tasks/rating';" value="Rating"/>
+      <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/tasks/add_task';" value="Add Task"/>
+      <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/user/logout';" value="Logout"/>
+</form>
+<h1> Completed Task: </h1>
+<form action="/tasks/completed_task" method="post">
+    {% csrf_token %}
+    <select name="Tasks">
+        {% for item in name %}
+            <option value="{{ item.rating }}" > {{ item.name }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>

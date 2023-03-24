@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTER</title>
+</head>
+<body>
+<form action="register" method="post">
+    {% csrf_token %}
+    <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/tasks/completed_task';" value="Complete Task"/>
+    <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/tasks/add_task';" value="Add Task"/>
+    <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/tasks/rating';" value="Rating"/>
+    <input type="button" onclick="window.location.href = 'http://127.0.0.1:8000/user/login';" value="Login"/>
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label for="email"><b>email</b></label>
+    <input type="text" placeholder="Enter email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit">Register</button>
+  </div>
+</form>
+</body>
+</html>
